@@ -8,7 +8,7 @@ const { httpGet } = require('./mock-http-interface');
  * @returns {ArnieQuoteResponse}
  */
 const getArnieQuotes = async (urls) => {
-   return Promise.all(
+  return Promise.all(
     urls.map(async (url) => {
       const response = await httpGet(url);
       const body = JSON.parse(response.body);
